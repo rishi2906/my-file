@@ -1,0 +1,28 @@
+Rishi Kumar
+Summary (Evaluation of candidate on various skill sets; Rating: Excellent, Good, and Average)
+•	Quantitative and Analytical Skills—Good:  Knowledge in statistics, probability, linear algebra, Credit risk, Market risk, Computational Finance.
+•	Communication Skills—Good: Decent communication skills in English and Hindi
+•	Domain Knowledge –Good: Econometrics, regression analysis, predictive algorithms, and statistical inference.
+•	Knowledge of Analytical tools— Excellent: R, RShiny, MATLAB, C, C++, Python and MySQL. Working knowledge in Excel VBA and SAS.
+Professional Experience
+Quantitative Analyst, CRISIL Global Research & Analytics, Pune, India	(From Aug’ 17 – Present)
+•	As a part of CECL Model Development team worked on LGD model development under current expected credit loss (CECL) guidelines and forecasted actual loss for the same, which was used for final loss calculation.
+•	Automated a process from data preparation to final model output for “Roll Rate Methodology” under CECL guidelines for mortgage portfolio.
+•	Performed PPNR Model Validation and documented the results for all the analysis performed, while part of Oyster team. 
+•	Developed PD model for mortgage portfolio based on Marginal Index approach using Basel Scorecard. Used PD model output to calculate Marginal Index and developed time series model to forecast Marginal Index to calculate monthly default rate.  
+•	Developed a credit Scorecard model using Logistic regression and WOE transformation technique. Also, developed a tool (both front and back ends) using RShiny for the same.
+•	Working on tool development for various simulations (M-factor, loss simulation etc.) using Monte carlo simulation technique using R and RShiny.
+KPMG Lean Six Sigma Green Belt, Guwahati, India   	(Nov’15)
+•	Learned detailed DMAIC approach, a quantified/data-driven methodology that focuses on processes and hard gains.
+•	During training, developed and analyzed various workout sessions on brainstorming, development of VOCs, Project Charter, Cause and Effect Fishbone diagram, Data Collection Plan and Sigma level calculations.
+•	Minitab work-out sessions on Measurement System Analysis, Graphical Analysis, Comparison tests and Correlation and Regression Analysis on normal and non-normal data.
+Academic Projects
+Monte Carlo Simulation
+•	Studied the Principles of Monte Carlo, generation of random numbers using LCG and its variations, simulation of univariate and multivariate normally distributed random variables, and generation of Brownian sample paths
+Search Engine
+•	Built a search engine to find the frequency of a queried word in a collection of files and sorting them in order. The process involved extensive research on methods that could be used to optimize the search.
+•	I was responsible for researching about ‘Hash tables using linked list’ and its use to optimize the search
+•	Technology used: C++
+Educational Qualifications
+•	Bachelor of Technology, Mathematics and Computing, Indian Institute of Technology, Guwahati, India
+
