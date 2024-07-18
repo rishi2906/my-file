@@ -1,0 +1,264 @@
+This document outlines the method for Through the cycle (TTC) or Unconditional PD curve estimation and methods for forecasting Point-in-Time (PIT) Probability of Default (PD) over different time horizons, incorporating future macro-economic conditions, to converge the requirements and modeling of International Financial Reporting Standard 9 (IFRS 9). Additionally, it covers the details of link function to link unconditional PD estimates to conditional PD estimates. 
+IFRS 9 requires banks to classify and measure financial instruments based on their business model and cash flow characteristics and implement an Expected Credit Loss (ECL) model for impairment. This model mandates banks to recognize 12-month ECL for Stage 1 assets and lifetime ECL for Stage 2 and Stage 3 assets, incorporating forward-looking information and macroeconomic conditions.
+This is the 4th generation of IFRS9 PD model development for Banks & FI portfolio. This document incorporates all the shortcomings identified by the Independent Model Review team (IMR) on the 3rd generation model. 
+The bank has evaluated different options during the development of TTC and PIT PD models (such as: options to make the Default rate monotonic, macro variable selection for regression model etc.) based on the data availability, ease of implementation, maturity level of the existing model/framework, maintenance and sustainability. 
+This document lays out the overall framework of IFRS 9 PD model for Banks & FI portfolio, illustrating the bank’s approach in developing lifetime PD models incorporating forward looking components as required by IFRS 9. 
+
+1.1.	Introduction
+The following table summarize key elements of model development exercise:
+
+Key Elements	Information
+Model Name	IFRS 9 PD Model Banks & FI
+Model Development Date	Aug, 2024
+Line of Business	CIB
+Type of Model	Lifetime IFRS 9 PD Model
+Model uses and purpose 	IFRS 9 ECL Computation
+GMIS Model ID	N/A
+Model Owner	CRO
+Model Developer	
+Model Documentation	Aug, 2024
+Table 1: Introduction
+1.1	Model Purpose Use and Scope
+The primary purpose of a Through-the-Cycle (TTC) Probability of Default (PD) model under IFRS 9 is to provide a stable and long-term average measure of credit risk that smooths out the fluctuations caused by economic cycles. TTC PD models provide a long-term view of credit risk, which is crucial for strategic decision-making and long-term financial planning.
+Basel III Compliance: While IFRS 9 primarily focuses on ECL, Basel III regulations require financial institutions to maintain stability in their risk estimates. TTC PD models help align with these regulatory expectations by providing a more consistent measure of credit risk over time.
+Capital Adequacy: By smoothing out short-term fluctuations, TTC PD models contribute to more stable capital requirements, ensuring that financial institutions maintain adequate capital buffers even during economic downturns.
+
+1.2	Model Structure and Specification
+To meet the IFRS 9 PD requirements in letter as well as in spirit, following two step approach was followed:
+Step 1: Developing an Unconditional or Through the Cycle (TTC) PD curve
+a) IFRS 9 requires a lifetime PD. This means that there should be some mechanism of projecting the Unconditional PD, Marginal or Cumulative, on a forward-looking basis
+b) "Unconditional PD" implies that this does not consider the impact of forward-looking macro-economic scenarios and is independent of future macro-economic forecasts.
+Step 2: Developing a methodology to condition the TTC PD to Point in Time (PIT) PD based on macro-economic factors
+a) The Unconditional PD must then be conditioned to develop Conditional Marginal PD
+b) "Conditional" implies that the PD at a certain forward point in time is conditional or dependent on the forecast of the economic conditions at that point in time
+c) This conditioning would be based on the forecast of macro-economic factors and other relevant forward-looking information.
+The following exhibit illustrates the two key steps summarized above:
+ 
+NOTE: Please note that this document provides the details of the TTC PD model only, and details of the PIT PD Model and the link function between them will be updated later in this document or provided separately.  
+Model Structure
+This sub-section further provides brief summary of the two-step model design:
+Step 1: Developing an Unconditional or TTC PD Curve
+The expected movements in risk of default over the lifetime of the financial instrument is estimated using lifetime PD curves or PD term structures. An 'Unconditional PD' curve does not consider the impact of forward looking macro-economic scenarios and is independent of future macho forecasts.
+The following two methods were discussed for developing Lifetime PD curves:
+•	Method 1 Assuming constant marginal PD consistent with current rating. No ratings transitions are assumed in this approach
+•	Method 2: Assuming rating transitions. Since rating transitions are natural in the portfolio, it is intuitive to assume that obligor rating has a chance of transitioning upwards or downwards
+The Bank chose to follow Method 2 as it is a better reflection of the underlying dynamics of credit ratings.
+
+This document outlines the method for Through the cycle (TTC) or Unconditional PD curve estimation and methods for forecasting Point-in-Time (PIT) Probability of Default (PD) over different time horizons, incorporating future macro-economic conditions, to converge the requirements and modeling of International Financial Reporting Standard 9 (IFRS 9). Additionally, it covers the details of link function to link unconditional PD estimates to conditional PD estimates. 
+IFRS 9 requires banks to classify and measure financial instruments based on their business model and cash flow characteristics and implement an Expected Credit Loss (ECL) model for impairment. This model mandates banks to recognize 12-month ECL for Stage 1 assets and lifetime ECL for Stage 2 and Stage 3 assets, incorporating forward-looking information and macroeconomic conditions.
+This is the 4th generation of IFRS9 PD model development for Banks & FI portfolio. This document incorporates all the shortcomings identified by the Independent Model Review team (IMR) on the 3rd generation model. 
+The bank has evaluated different options during the development of TTC and PIT PD models (such as: options to make the Default rate monotonic, macro variable selection for regression model etc.) based on the data availability, ease of implementation, maturity level of the existing model/framework, maintenance and sustainability. 
+This document lays out the overall framework of IFRS 9 PD model for Banks & FI portfolio, illustrating the bank’s approach in developing lifetime PD models incorporating forward looking components as required by IFRS 9. 
+
+1.1.	Introduction
+The following table summarize key elements of model development exercise:
+
+Key Elements	Information
+Model Name	IFRS 9 PD Model Banks & FI
+Model Development Date	Aug, 2024
+Line of Business	CIB
+Type of Model	Lifetime IFRS 9 PD Model
+Model uses and purpose 	IFRS 9 ECL Computation
+GMIS Model ID	N/A
+Model Owner	CRO
+Model Developer	
+Model Documentation	Aug, 2024
+Table 1: Introduction
+1.1	Model Purpose Use and Scope
+The primary purpose of a Through-the-Cycle (TTC) Probability of Default (PD) model under IFRS 9 is to provide a stable and long-term average measure of credit risk that smooths out the fluctuations caused by economic cycles. TTC PD models provide a long-term view of credit risk, which is crucial for strategic decision-making and long-term financial planning.
+Basel III Compliance: While IFRS 9 primarily focuses on ECL, Basel III regulations require financial institutions to maintain stability in their risk estimates. TTC PD models help align with these regulatory expectations by providing a more consistent measure of credit risk over time.
+Capital Adequacy: By smoothing out short-term fluctuations, TTC PD models contribute to more stable capital requirements, ensuring that financial institutions maintain adequate capital buffers even during economic downturns.
+
+1.2	Model Structure and Specification
+To meet the IFRS 9 PD requirements in letter as well as in spirit, following two step approach was followed:
+Step 1: Developing an Unconditional or Through the Cycle (TTC) PD curve
+a) IFRS 9 requires a lifetime PD. This means that there should be some mechanism of projecting the Unconditional PD, Marginal or Cumulative, on a forward-looking basis
+b) "Unconditional PD" implies that this does not consider the impact of forward-looking macro-economic scenarios and is independent of future macro-economic forecasts.
+Step 2: Developing a methodology to condition the TTC PD to Point in Time (PIT) PD based on macro-economic factors
+a) The Unconditional PD must then be conditioned to develop Conditional Marginal PD
+b) "Conditional" implies that the PD at a certain forward point in time is conditional or dependent on the forecast of the economic conditions at that point in time
+c) This conditioning would be based on the forecast of macro-economic factors and other relevant forward-looking information.
+The following exhibit illustrates the two key steps summarized above:
+ 
+NOTE: Please note that this document provides the details of the TTC PD model only, and details of the PIT PD Model and the link function between them will be updated later in this document or provided separately.  
+Model Structure
+This sub-section further provides brief summary of the two-step model design:
+Step 1: Developing an Unconditional or TTC PD Curve
+The expected movements in risk of default over the lifetime of the financial instrument is estimated using lifetime PD curves or PD term structures. An 'Unconditional PD' curve does not consider the impact of forward looking macro-economic scenarios and is independent of future macho forecasts.
+The following two methods were discussed for developing Lifetime PD curves:
+•	Method 1 Assuming constant marginal PD consistent with current rating. No ratings transitions are assumed in this approach
+•	Method 2: Assuming rating transitions. Since rating transitions are natural in the portfolio, it is intuitive to assume that obligor rating has a chance of transitioning upwards or downwards
+The Bank chose to follow Method 2 as it is a better reflection of the underlying dynamics of credit ratings.
+
+4	Methodology
+4.1	Identification of Possible methodology for TTC PD Model
+Probability of Default (PD) is a key metric in credit risk management, measuring the likelihood that a specific borrower, known as an obligor, will fail to meet their debt obligations within a certain period. PD is a critical component in calculating the Expected Credit Loss (ECL) and plays a significant role in the financial stability of lending institutions. Several factors influence PD, including both idiosyncratic and systematic risks.
+In light of the above, the following four decision points were assessed while finalizing PD methodology.
+
+Sr. No.	Decision Point	Description
+1	Model Design	Two possible methods were explored. 
+i.	Two step approach wherein TTC and PIT PDs are derived separately
+ii.	Black box approach wherein no intermediate TTC PD curve would be available, and the model output would be final PIT PD curve
+2	Rating transition to be assumed for developing TTC PD curve	Again, two possible methods were explored for developing an unconditional or TTC PD curve.
+i.	Assuming constant marginal PD consistent with current rating. That is no rating transition to be assumed throughout the life of the loan
+ii.	Assuming rating transitions. Since rating transitions are natural in the portfolio
+3	Transition matrix to be built (for developing TTC PD curve) based on internal data or externally published matrix by credit rating agency	Two possible methods were explored for developing TTC transition matrix, based on data availability. 
+i.	Develop the matrix based on historical portfolio ratings transition data 
+ii.	Develop the matrix based on externally published long-term average ratings transition matrix published by external credit rating agencies (viz. S&P, Moody's and Fitch) 
+4	Link function to convert TTC PD curve into PIT	Two possible methods were explored to determine the link function (based on industry best practice) for converting TTC PD curve into PIT
+i.	Macroeconomic regression-based approach - regressing portfolio level historical default rates against macroeconomic variables to determine appropriate link function between default rates and macroeconomic factors.
+ii.	Vasicek framework - Default rates are assumed to follow Vasicek distribution (Asymptotic Single Risk Factor model as assumed by Basel Committee on Banking Supervision - BCBS18 ) 
+5	Macroeconomic regression model to be built based on historical default rates	Two possible methods were explored for developing the macroeconomic regression model (based on data availability) to convert TTC to PIT estimate.
+i.	Build the model-based on historical internal default rates
+ii.	Build the model based on historical externally published default rates by external credit rating agencies (viz. S&P, Moody's and Fitch)
+4.2	Assessment of Possible Approach
+The bank has thoroughly evaluated all options, taking into account the available data and system infrastructure. The following assessments have been made for each decision point:
+1.	The Two-Step Approach offers greater transparency and flexibility, making it easier to understand and adjust, but it is more complex and resource intensive. The Black Box Approach is simpler and more efficient, but it lacks transparency and flexibility, which could lead to challenges in model validation and regulatory approval. Hence, the Bank chose to adopt a two-step approach wherein the overall problem statement to be broken down into logical parts empowering the Bank with more visibility and control. Also, the same enables Bank to deploy robust mitigation control at an early stage
+2.	Ignoring rating transitions may lead to unrealistic PD estimates, as it does not account for changes in the obligor's credit quality over time. Also, the constant PD may underestimate risk for deteriorating credit quality or overestimate risk for improving credit quality. Henceforth, method 2 (i.e. assuming rating transition) was adopted for developing TTC PD curve. Further it is to be noted here that the rating transitions were assumed to hold Markov Property19 , that is future rating for any customer depends only upon current rating and not on the sequence of ratings that preceded it. It is also commonly referred as memoryless property of a stochastic process
+3.	It was noted that the Banks & FI portfolio is typically concentrated on investment grade ratings. As such, adequate internal data to build a complete transition matrix covering all ratings transition combinations was not available . Henceforth, the Bank decided to use externally published transition matrix for Banks & FI portfolio by external credit rating agencies (viz. S&P, Moody's and Fitch respectively). These agencies provide long-term average transition matrix for Banks & FI portfolio covering adequate historical time period. Further, given the data coverage and transition information  for various rating, it was decided to use S&P long-term average ratings transition matrix for Banks & Fl portfolio20 
+4.	Vasicek framework relies on assumptions about the distribution of default rates and the correlation between obligors, which may not always hold true in practice. Also, it may not capture the full range of economic factors influencing default rates as effectively as a regression-based approach. Henceforth, the Bank decided to adopt a regression- based approach 
+5.	It was noted that owing to the low default portfolio characteristic of Banks & FI portfolio, building a macroeconomic model based on internal historical default rates was not feasible. Subsequently, the Bank decided to build macroeconomic model based on global default rates (published by S&P) and global macroeconomic parameters. Given the unconditional PD term structure was also built on S&P published global ratings data, the overall framework would thus be based on global dataset. Further, it was decided that in case no statistically significant model could be arrived at on this global dataset, the Bank would use the macroeconomic model developed for corporate portfolio  as a fallback option to comply with forward looking PD term structure requirements of IFRS9
+
+Please note, the above decisions were taken during internal workshops held on 17th Oct 2019, 19th Apr 2020 and 03rd Jun 2020 with participations from ERM IFRS 9 team, ERM Wholesale Risk Modelling team and PwC; chaired by Head of ERM. 
+
+	Selection of Preferred Approach
+A two-step model design was finally selected. Whilst step 1 is to develop an unconditional or TTC PD curve, step 2 is to convert the TTC PD curve to PIT PD curve using appropriate macroeconomic link function. Following sub-sections further summarizes these two steps at a high level:
+	Developing an Unconditional or TTC PD Curve
+The expected movements in risk of default over the lifetime of the financial instrument is estimated using lifetime PD curves or PD term structures. An 'Unconditional PD' curve does not consider the impact of forward looking macro-economic scenarios and is independent of future macro forecasts.
+The key requirement in developing an unconditional or TTC PD curve is deriving one-year TTC rating transition matrix. The Bank has developed a rating transition matrix based on internal historical rating movements. 
+The methodology for developing internal TTC rating transition matrix is further detailed in section 5.3.1  of this document.
+Once the TTC rating transition matrix is generated, the N-Year forward looking cumulative PD estimates corresponding to any rating grade are generated by multiplying N TTC rating transition matrix .
+TTC Cumulative PD_(year N)=[TTC Matrix]*[TTC Matrix]*[TTC Matrix]
+Given TTC rating transition matrix corresponds to 12m transition probabilities, the cumulative PD estimated from matrix multiplication is on yearly basis. However, monthly PD is required to estimate ECL. Methodology adopted to derive monthly TTC cumulative PD curve from yearly TTC cumulative PD curve is as per below:
+TTC cumulative PD_(month N)=1-(1-PD Annual)^(N/12);where 1≤N≤12
+Where PD annual = Marginal PD of that year. 
+Subsequently, once the cumulative PD is derived, the marginal PD for any month of a particular year can be derived as follows:
+TTC Marginal PD_(Month N)= {█(TTC Cumulative PD_(Month N)-TTC Cumulative PD_(Month N-1),2≤N≤12@TTC Cumulative PD_(Month N),N=1)┤
+
+Please refer to Appendix IV for more details on TTC PD curve development. 
+
+Further, given the PD curves have been developed using S&P published transition matrix final step was undertaken to map PD curves on Bank's MRS. This would ensure that final PD curves are available for each internal rating grade for final ECL computation purposes.
+As per Bank's MRS, following mapping is used between internal rating grade and S&P grade for Banks & Fl portfolio:
+
+It is noted that internal rating grades are mapped one-to-one for S&P rating grade except for rating 1.1 and 2.1 (for rating grade 8.2, whilst is mapped to multiple S&P rating grades CCC-/CC but since S&P also using the group rating for transition matrix estimation, this is equivalent to a one- to-one mapping like other rating grades). Henceforth, following is noted:
+i.	For one-to-one mapped rating grades, final PD curves arrived at for corresponding S&P rating grade are applied for mapped internal rating grade
+ii.	For others, following adjustments are applied:
+a.	For 1.2, average PD curve across rating grades AA+ and AA is estimated
+b.	For 2.1, average PD curve across rating grades A+ and A is estimated
+
+
+	Model Development Process
+	Portfolio Segmentation	
+The Model was developed for banks & FI portfolio. No further portfolio segmentation was applied. Please refer to the segmentation document for more detail. 
+
+	Methodology Overview
+To meet the IFRS 9 PD requirements in letter as well as in spirit, following two step approach was followed:
+Step 1: Developing an Unconditional or Through the Cycle (TTC) PD curve
+	IFRS 9 requires a lifetime PD. This means that there should be some mechanism of projecting the Unconditional PD, Marginal or Cumulative, on a forward-looking basis
+	"Unconditional PD" implies that this does not consider the impact of forward looking macro-economic scenarios and is independent of future macro-economic forecasts.
+Step 2: Developing a methodology to condition the TTC PD to Point in Time (PIT) PD based on macro-economic factors
+	The Unconditional PD must then be conditioned to develop Conditional Marginal PD
+	"Conditional" implies that the PD at a certain forward point in time is conditional or dependent on the forecast of the economic conditions at that point in time
+	This conditioning would be based on forecast of macro-economic factors and other relevant forward-looking information.
+The following sub-sections provide details on the methodology design.
+	Developing an Unconditional or TTC PD Curve
+	Deriving Long-Term Average Rating Transition Matrix
+Whilst the Bank has adequate historical internal ratings data (covering possible combinations of rating transitions) to derive internal transition matrix for Corporate and SME portfolios; similar internal data for Banks & Fl portfolio is not available  (it was noted that the Banks & FI portfolio is typically concentrated in investment grade ratings. As such, adequate internal data to build a complete transition matrix covering all ratings transition combinations was not available). 
+Henceforth, the Bank decided to use externally published transition matrix for Banks & Fl portfolio by external credit rating agencies (i.e. S&P, Moody's and Fitch respectively). These agencies provide long-term average transition matrix for Banks & FI portfolio covering adequate historical time period. Further, based on the data availability and population coverage of investment grade, it was decided to use S&P rating transition matrix for Banks & FI portfolio . 
+S&P published matrix corresponds to rating transitions for Banks & Fl portfolio covering a period from 1981-2023 and is henceforth treated as TTC 12m rating transition matrix.
+S&P published long-term average ratings transition matrix is provided in Appendix IV. 
+	Adjustment to Not Rated (or Rating Withdrawn) Probabilities
+It was observed that the S&P transition matrix also includes probabilities against not rated or rating withdrawn customers across each rating grade. The following table summarizes such probabilities across each rating grade:
+Rating	NR
+AAA	0.0472
+AA+	0.0235
+AA	0.0345
+AA-	0.0411
+A+	0.0458
+A	0.0485
+A-	0.0455
+BBB+	0.056
+BBB	0.0571
+BBB-	0.0935
+BB+	0.1041
+BB	0.0962
+BB-	0.0824
+B+	0.0943
+B	0.0903
+B-	0.0769
+CCC/C	0.1478
+Table 11: 'Not Rated' Probabilities across each Rating Grade as per published S&P Matrix
+For each rating grade, the 'not rated' probability was proportionately distributed and allocated across all other rating grades, and final transition probabilities arrived at as follows:
+TP_(ij (Adjusted-NR) )=TP_(ij (Base) )+(1- ∑_(j=AAA)^(j=D)▒〖TP_(ij (Base) ) 〗)*  ((TP_(ij (Base) ))/(∑_(j=AAA)^(j=D)▒〖TP_(ij (Base) ) 〗))
+Where, 
+TP_(ij (Adjusted-NR) )=   Transition probability from rating grade i to rating grade j after adjusting for 'not rated probabilities
+TP_(ij (Base) )=  Transition probability from rating grade i to rating grade j as per S&P base extract (before adjusting for ‘not rated’ probabilities)
+The following table summarizes the base and adjusted transition probabilities for rating grade AAA after adjusting for ‘not rated’ probability:
+
+5.3.3	Default Rate ‘Monotonicity’ Adjustment
+It was observed that there was breach of monotonicity for some rating grades in 12-month TTC default transition probabilities (after accounting for 'not rated' probabilities) in S&P published transition matrix. The following table illustrates 12-month TTC default transition probabilities across rating grades. The monotonicity breaches are highlighted separately.
+Further, once default transition probability is adjusted for a rating grade, transition probabilities corresponding to all other rating grades need to be adjusted (pro-rated) to ensure sum of transition probabilities across all rating grade in a row equals 100%. Adjusted transition probabilities are estimated as:
+TP_(ij (Adjusted-Monotonicity))=(1-D_(i (Adjusted Monotonicity) ) )*  (TP_(ij (Adjusted-NR)))/(∑_(j=AAA)^(j=CCC/CC)▒〖TP_(ij (Adjusted-NR)) 〗)
+where,
+TP_(ij (Adjusted-Monotonicity))= transition probability from rating grade i to rating grade j after adjusting for monotonicity adjustment
+D_(i (Adjusted-Monotonicity))= default transition probability for rating grade i after monotonicity adjustment 
+TP_(ij (Adjusted-NR))= transition probability from rating grade i to rating grade j after adjusting for 'not rated' probabilities
+
+It was observed that post 'not rated' and 'monotonicity' adjustments, the default rate was 0% for the top end of investment rating grades (viz. AAA to A+). The following table summarizes the default transition probabilities for select rating grades (AAA to A rating grades) as derived from S&P post 'not rated' and 'monotonicity adjustments and 12m TTC PD as per the bank's existing MRS:
+
+Table 14: Default Transition Probabilities across select Rating Grade as per published S&P Matrix (after adjusting for 'not rated' and 'monotonicity') and TTC 12m PD per Bank's MRS
+As a measure of conservatism, the Bank decided to use a log-linear interpolation approach to derive non-0% TTC default transition probabilities (leveraging the existing MRS) for such rating grades. This was to ensure for exposures within these rating grades, the Bank sets aside a non-zero IFRS9 ECL estimate.
+Details for log-linear interpolation (corresponding to grades AAA to A+) are referenced below. Step 1: Derive a for log-linear interpolation based on the bank’s MRS
+
+Table 14: Default Transition Probabilities across select Rating Grade as per published S&P Matrix (after adjusting for 'not rated' and 'monotonicity') and TTC 12m PD per Bank's MRS
+As a measure of conservatism, the Bank decided to use a log-linear interpolation approach to derive non-0% TTC default transition probabilities (leveraging the existing MRS) for such rating grades. This was to ensure for exposures within these rating grades, the Bank sets aside a non-zero IFRS9 ECL estimate.
+Details for log-linear interpolation (corresponding to grades AAA to A+) are referenced below. Step 1: Derive a for log-linear interpolation based on the bank’s MRS
+
+Step 1: Derive a for log-linear interpolation based on the bank’s MRS
+α_i=  ( ln⁡(PD_(i MRS)) )-ln⁡(PD_(A (MRS) ) ))/(-ln⁡(PD_(A (MRS) ) ) )
+where,
+α= a Log-linear interpolation factor for rating grade i (where i ranges from AAA to A+)
+PD_(i (MRS))= TTC 12m PD for rating grade i (per SABB existing MRS)
+PD_(A (MRS))= TTC 12m PD for rating grade A (per SABB existing MRS)
+Step 2: Apply log-linear interpolation on S&P-derived default transition probability 
+ D_(i (Final) )=exp⁡〖((1-α_i )〗*ln⁡(D_(A (Adjusted-Monotonocity) )))
+Where,
+D_(i (Final))=  Default transition probability for rating grade i (where i ranges from AAA to A+) after log-linear interpolation
+α= log-linear interpolation factor for rating grade i (where i ranges from AAA to A+)
+D_(A (Adjusted-Monotonicity))= Default transition probability for rating grade A post monotonicity adjustment
+Further, once the default transition probability is adjusted post log-linear interpolation, transition probabilities corresponding to all other rating grades need to be adjusted (pro-rated) to ensure the sum of transition probabilities equals 100%. Adjusted transition probabilities are estimated as: 
+TP_(ij (Final))=(1-D_(i (Final) ) )*  (TP_(ij (Adjusted-Monotonocity)))/(∑_(j=AAA)^(j=CCC/CC)▒〖TP_(ij (Adjusted-Monotonicity)) 〗)
+where,
+TP_(ij (Final))= Transition probability from rating grade i to rating grade j post log-linear interpolation 
+D_(i (Final) )= Default transition probability for rating grade i Post log-linear interpolation
+TP_(ij (Adjusted-Monotonocity))= Transition probability from rating grade i to rating grade j after adjusting for monotonicity. 
+The final rating transition matrix post all adjustments is provided in Appendix
+
+	Developing yearly cumulative TTC PD Curve
+It is assumed that the rating transition follows a discrete-time Markov chain  Process. This process considers a finite state space, which includes possible obligor rating states ranging from CRR 0.1 to CRR 10 (in this case).
+Markov Property: The future rating of any customer depends solely on their current rating and not on the sequence of ratings that preceded it. Mathematically, this is expressed as:
+Pr⁡(X_(t+1 )=x┤| X_t=x_t,X_(t-1)=x_(t-1),....,X_1  =x_1)=Pr⁡(X_(t+1)=x|X_t=x_t) 
+Where, X_nis the rating grade at year ‘n’
+The transition process is assumed to be a discrete-time Markov chain, which allows for calculating the probability of moving from any rating to a default rating over a specified period. For example, the probability of going to a default rating from any rating in two years, 
+P_(i,D)  (0,2) can be calculated as:
+P_(i,D) (0,2)=∑_j▒〖P_(i,j) (0,1)*P_(j,D) (1,2) 〗
+Here,
+P_(i,j) (0,1)represent the probability of moving from rating i to rating j in one year and P_(j,D)  (1,2) is the probability of moving from rating j to default in the second year.
+Similarly, the probability of moving to a default rating from any rating in three years, P_(i,D) (0,3), can be derived using the transition probabilities for each year sequentially.
+Further extending the probability calculation for default transition, the probability of transitioning to a default rating from any rating over 'n' years can be described using the Markov chain approach. The formula gives this:
+
+P_(i,j) (0,u) is the transition probability from rating i to rating j from time 0 to time u.
+P_(j,D) (u,n) is the transition probability from rating j to default from time u to time n.
+In this model, the default state is considered an 'absorbing state '. This means once an obligor enters the default state, they cannot return to a performing state. Hence, to generate N-year forward-looking Cumulative Default Rates corresponding to any rating grade, multiply N Through-the-Cycle (TTC) rating transition matrices:
+TTC Cumulative PD_(year N)=[TTC Matrix]*[TTC Matrix]*…*[TTC Matrix]
+This methodology allows for a structured and probabilistic approach to predicting future credit ratings based on current ratings, which is essential for assessing credit risk and determining expected credit losses (ECL) under frameworks like IFRS 9.
+
+	Developing Monthly Cumulative /Marginal TTC PD Curve 
+Given that the TTC rating transition matrix corresponds to 12m transition probabilities, the cumulative PD estimated from matrix multiplication is on a yearly basis. However, monthly PD is required to estimate ECL. The methodology adopted to derive the monthly TTC cumulative PD curve from the yearly TTC cumulative PD curve is as per below:
+TTC cumulative PD_(month N)=1-(1-PD Annual)^(N/12);where 1≤N≤12
+Where PD annual = Marginal PD of that year. 
+Subsequently, once the cumulative PD is derived, the marginal PD for any month of a particular year can be derived as follows:
+TTC Marginal PD_(Month N)= {█(TTC Cumulative PD_(Month N)-TTC Cumulative PD_(Month N-1),2≤N≤12@TTC Cumulative PD_(Month N),N=1)┤
+
+
+
