@@ -1,0 +1,77 @@
+Model acceptance criteria for Probability of Default (PD), Loss Given Default (LGD), and Exposure at Default (EAD) are essential to ensure the accuracy, reliability, and regulatory compliance of credit risk models. Here are some general acceptance criteria for these models:
+
+Probability of Default (PD) Models
+Discriminatory Power:
+
+Accuracy Ratio (AR) or Gini Coefficient: Measure the model's ability to differentiate between defaulters and non-defaulters.
+Receiver Operating Characteristic (ROC) Curve and Area Under the Curve (AUC): Assess the trade-off between sensitivity and specificity.
+Calibration:
+
+Calibration Accuracy: Ensure the predicted PDs align with observed default rates. Use statistical tests such as the Hosmer-Lemeshow test.
+Backtesting: Compare predicted PDs with actual default rates over time.
+Stability:
+
+Population Stability Index (PSI): Monitor changes in the distribution of the population over time.
+Characteristic Stability Index (CSI): Ensure the relationship between risk drivers and default rates remains stable.
+Regulatory Compliance:
+
+Ensure the model meets the requirements set by regulators like Basel III, including validation by independent units and periodic reviews.
+Loss Given Default (LGD) Models
+Predictive Power:
+
+Coefficient of Determination (R^2): Measure the proportion of variance in observed LGDs explained by the model.
+Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE): Assess the accuracy of LGD predictions.
+Calibration:
+
+Goodness-of-Fit Tests: Use statistical tests to compare predicted and observed LGDs.
+Backtesting: Validate the model using historical LGD data.
+Segmentation:
+
+Ensure that the model appropriately segments different types of exposures, reflecting differences in recovery rates across segments.
+Stress Testing:
+
+Test the model under various stress scenarios to ensure it performs well under adverse conditions.
+Regulatory Compliance:
+
+Adhere to guidelines such as those from the Basel Committee on Banking Supervision (BCBS) for LGD estimation and validation.
+Exposure at Default (EAD) Models
+Predictive Accuracy:
+
+Mean Absolute Percentage Error (MAPE) and Root Mean Squared Error (RMSE): Evaluate the accuracy of EAD predictions.
+Out-of-Sample Testing: Validate the model on data not used during model development.
+Conservatism:
+
+Ensure that the model provides conservative estimates of exposure, especially under stressed conditions.
+Segmentation:
+
+Segment exposures appropriately to reflect differences in usage patterns and potential future drawdowns.
+Utilization Rate Models:
+
+For revolving exposures, validate the utilization rate models that predict the proportion of available credit lines that will be drawn down at default.
+Regulatory Compliance:
+
+Follow guidelines such as those from BCBS and ensure compliance with regulatory standards for EAD estimation and validation.
+General Acceptance Criteria for All Models
+Documentation:
+
+Comprehensive documentation of model development, including data sources, methodology, assumptions, and validation results.
+Governance:
+
+Independent validation by a separate risk management or audit function.
+Periodic reviews and updates to ensure the model remains relevant and accurate.
+Transparency:
+
+Clear explanation of the model’s mechanics, assumptions, and limitations.
+Management Approval:
+
+Approval by senior management and, where applicable, the board of directors.
+References
+Basel Committee on Banking Supervision (BCBS) Papers:
+
+BCBS provides comprehensive guidelines for the development and validation of credit risk models.
+BCBS Guidelines
+Books and Publications:
+
+"Basel III Credit Rating Systems" by Luisa Izzi, Gianluca Oricchio, and Laura Vitale.
+"SME Funding" by Gianluca Oricchio, Sergio Lugaresi, Andrea Crovetto, and Stefano Fontana.
+These acceptance criteria ensure that PD, LGD, and EAD models are robust, reliable, and compliant with regulatory standards.
