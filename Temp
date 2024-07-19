@@ -1,10 +1,6 @@
-Hi Kevin,
 
-Below is the update on the TTC Model for Banks & FI and Sovereign:
-
-i.	We had a detailed discussion with Simba, Srijani, and Abinas on whether to select S&P Data or Fitch data. Based on some analysis (attached to the PowerPoint), we have finalized S&P data for the TTC Model.
-ii.	We've made significant progress on the TTC model. Using the S&P average rating transition matrix for Banks and FI and Sovereign, we have developed the model. We've also performed various intermediate steps to ensure the Default Rate (DR) is monotonic and calculated the lifetime TTC PD. 
-iii.	The PIT PD model for Banks & FI and Sovereign can’t be developed since these segments have no default or significantly less. As discussed, we will use the PIT model from the corporate segment here. 
-iv.	Our next steps involve working on the PIT PD model for the SME Segment. We aim to complete this by Sunday and then shift our focus to the PIT PD model for the Corporate Segment from Monday. 
-v.	Parallelly, we are using internal data to develop the TTC PD model for SME and corporate segments. 
-vi.	We will have the PD model results for all the segments by the end of next week. 
+IFRS 9 mandates that financial institutions utilize a forward-looking approach to estimate and recognize expected credit losses (ECL) by incorporating the 
+Probability of Default (PD). The PD model must estimate the likelihood of default over both the next 12 months and the entire lifetime of the financial asset, 
+factoring in forward-looking information such as macroeconomic conditions. For ECL, institutions are required to calculate the present value of all cash shortfalls 
+over the expected life of the financial asset, considering different possible outcomes and scenarios. The model must reflect unbiased and probability-weighted amounts 
+determined by evaluating a range of possible outcomes, thus ensuring a comprehensive assessment of credit risk.
