@@ -1,6 +1,4 @@
-The purpose of Point-in-Time (PIT) and Through-the-Cycle (TTC) Probability of Default (PD) models is to assess credit risk under different perspectives. 
-PIT PD models estimate the likelihood of default based on current economic conditions and borrower-specific information, providing a snapshot of credit risk 
-that reflects real-time changes in the economic environment. In contrast, TTC PD models estimate the default probability by smoothing out the effects of economic 
-cycles, focusing on the borrower's creditworthiness over an economic cycle's entirety. This helps in understanding the long-term average risk and mitigating 
-procyclicality in credit risk assessment and capital requirements. Combining both models provides a more balanced and comprehensive view of credit risk, aligning 
-short-term assessments with long-term risk management strategies.
+The IFRS 9 Probability of Default (PD) model outputs the likelihood that a borrower will default on their obligations over a specified time horizon, 
+incorporating forward-looking information and macroeconomic factors. This output is used to calculate Expected Credit Losses (ECL), which financial 
+institutions must recognize to reflect potential credit losses accurately. The PD model ensures that credit risk assessments are dynamic and responsive 
+to changing economic conditions, aiding in prudent risk management and regulatory compliance by aligning capital reserves with anticipated credit risks.
