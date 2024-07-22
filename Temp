@@ -1,8 +1,4 @@
-When using S&P rating transition matrices for Saudi Awwal Bank’s Wholesale Credit Risk for Banks and Financial Institutions (FIs), consider these limitations:
-Regional Specificity: S&P's matrices may not fully capture the unique economic and regulatory conditions of the Saudi market.
-Sector Specificity: General matrices might not accurately reflect the risk profiles specific to banks and FIs within Saudi Arabia.
-Historical Data: The matrices rely on historical data, which may not account for recent economic changes or future projections.
-Internal Factors: They may not incorporate unique internal risk factors and portfolio characteristics specific to Saudi Awwal Bank.
-For more detailed insights, refer to the S&P report here.
+We have finalized the TTC PD Model document for the Banks and FI Segment and are sharing it for your review. Please look into it and provide your feedback.
 
-https://www.spglobal.com/ratings/en/research/articles/240328-default-transition-and-recovery-2023-annual-global-corporate-default-and-rating-transition-study-13047827
+Note that this document includes sections/placeholders for the entire model (i.e., TTC, PIT, and Link function). However, we've only filled out the sections 
+related to the TTC model and left the PIT and other sections blank. We will complete the remaining sections once the PIT model is finished.
