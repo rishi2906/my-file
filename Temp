@@ -1,5 +1,8 @@
-The figure illustrates the methodology for estimating lifetime Probability of Default (PD) under IFRS 9, comparing Unconditional Cumulative PD and Conditional 
-Cumulative PD. The left chart shows Unconditional Cumulative PD, which reflects default probabilities without considering current economic conditions. 
-The right chart presents Conditional Cumulative PD, which adjusts the Unconditional PD estimates by incorporating macroeconomic forecasts (e.g., oil prices, 
-GDP growth rates) using a link function. This adjustment provides a more accurate and forward-looking assessment of credit risk over the lifetime of the financial 
-asset, essential for calculating Expected Credit Losses (ECL) under IFRS 9.
+When using S&P rating transition matrices for Saudi Awwal Bank’s Wholesale Credit Risk for Banks and Financial Institutions (FIs), consider these limitations:
+Regional Specificity: S&P's matrices may not fully capture the unique economic and regulatory conditions of the Saudi market.
+Sector Specificity: General matrices might not accurately reflect the risk profiles specific to banks and FIs within Saudi Arabia.
+Historical Data: The matrices rely on historical data, which may not account for recent economic changes or future projections.
+Internal Factors: They may not incorporate unique internal risk factors and portfolio characteristics specific to Saudi Awwal Bank.
+For more detailed insights, refer to the S&P report here.
+
+https://www.spglobal.com/ratings/en/research/articles/240328-default-transition-and-recovery-2023-annual-global-corporate-default-and-rating-transition-study-13047827
