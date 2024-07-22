@@ -1,4 +1,5 @@
-The IFRS 9 Probability of Default (PD) model outputs the likelihood that a borrower will default on their obligations over a specified time horizon, 
-incorporating forward-looking information and macroeconomic factors. This output is used to calculate Expected Credit Losses (ECL), which financial 
-institutions must recognize to reflect potential credit losses accurately. The PD model ensures that credit risk assessments are dynamic and responsive 
-to changing economic conditions, aiding in prudent risk management and regulatory compliance by aligning capital reserves with anticipated credit risks.
+The figure illustrates the methodology for estimating lifetime Probability of Default (PD) under IFRS 9, comparing Unconditional Cumulative PD and Conditional 
+Cumulative PD. The left chart shows Unconditional Cumulative PD, which reflects default probabilities without considering current economic conditions. 
+The right chart presents Conditional Cumulative PD, which adjusts the Unconditional PD estimates by incorporating macroeconomic forecasts (e.g., oil prices, 
+GDP growth rates) using a link function. This adjustment provides a more accurate and forward-looking assessment of credit risk over the lifetime of the financial 
+asset, essential for calculating Expected Credit Losses (ECL) under IFRS 9.
