@@ -1,11 +1,14 @@
-Hi Kevin,
+Progress Update on TTC Models:
 
-Below is the Progress Update on TTC Models:
+Banks/FI and Sovereign TTC PD Model:
+Simba and Srijani provided feedback on this model. We are addressing their comments and will share the updated document by Sunday.
 
-i.	Simba and Srijani gave feedback on the Banks/ FI and Sovereign TTC PD model. We are working on their comments and will share the updated document on Sunday.
-ii.	We will re-run the TTC PD model for SME and Corporate using updated data (after GHO overriding using parent GHO) and share the results by Sunday EoD.
-iii.	Next week, we will work on PIT model variable selection and model calibration. 
+SME and Corporate TTC PD Model:
+We will re-run the model using updated data (including GHO overrides with parent GHO) and share the results by Sunday end of day.
 
-We are also able to log in to the two new laptops. However, we are still waiting on shared folder access for file sharing.
+PIT Model:
+Next week, we will focus on variable selection and model calibration for the PIT model.
+
+Additionally, we have successfully logged in to the two new laptops. However, we are still awaiting access to the shared folder for file sharing.
 
 Have a great weekend!
