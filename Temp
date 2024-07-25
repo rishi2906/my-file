@@ -1,4 +1,11 @@
-We have finalized the TTC PD Model document for the Banks and FI Segment and are sharing it for your review. Please look into it and provide your feedback.
+Hi Kevin,
 
-Note that this document includes sections/placeholders for the entire model (i.e., TTC, PIT, and Link function). However, we've only filled out the sections 
-related to the TTC model and left the PIT and other sections blank. We will complete the remaining sections once the PIT model is finished.
+Below is the Progress Update on TTC Models:
+
+i.	Simba and Srijani gave feedback on the Banks/ FI and Sovereign TTC PD model. We are working on their comments and will share the updated document on Sunday.
+ii.	We will re-run the TTC PD model for SME and Corporate using updated data (after GHO overriding using parent GHO) and share the results by Sunday EoD.
+iii.	Next week, we will work on PIT model variable selection and model calibration. 
+
+We are also able to log in to the two new laptops. However, we are still waiting on shared folder access for file sharing.
+
+Have a great weekend!
