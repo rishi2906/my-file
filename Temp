@@ -1,14 +1,6 @@
-Progress Update on TTC Models:
+Unconditional marginal PD refers to the probability that a borrower will default in a specific time period, given that they have not defaulted up to the 
+beginning of that period. It is "unconditional" because it does not depend on any particular conditions or scenarios; it is an average probability across all 
+possible states of the world.
 
-Banks/FI and Sovereign TTC PD Model:
-Simba and Srijani provided feedback on this model. We are addressing their comments and will share the updated document by Sunday.
-
-SME and Corporate TTC PD Model:
-We will re-run the model using updated data (including GHO overrides with parent GHO) and share the results by Sunday end of day.
-
-PIT Model:
-Next week, we will focus on variable selection and model calibration for the PIT model.
-
-Additionally, we have successfully logged in to the two new laptops. However, we are still awaiting access to the shared folder for file sharing.
-
-Have a great weekend!
+Cumulative PD, on the other hand, is the probability that a borrower will default at any time up to and including a specific time horizon. 
+It accumulates the risk over multiple periods.
