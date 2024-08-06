@@ -1,25 +1,22 @@
-Using Quarterly Interpolated Data for Model Development
-For the current IFRS 9 Model Redevelopment exercise, 700+ Macroeconomic Variables (MEVs) from Oxford Economics (OE ) were sourced to expand the variable base. 
-All the variables are available at the annual level except for the 13 macroeconomic variables, which are available at the quarterly level. However, the internal 
-observed default rate (ODR) is available quarterly. To run the regression model with ODRs, macroeconomic variables need to be converted at the quarterly level. 
-The Banks contacted the OE to get all the variables at the quarterly level but found that only 13 variables  are available at a quarterly frequency, and the rest
-are available at an annual frequency. Hence, the model development team has decided to use interpolation to convert the macroeconomic variable quarterly from annual. 
-The model development team, with their extensive expertise, has tried and tested linear and cubic interpolation techniques to generate the quarterly data. This 
-ensures that the best interpolation technique has been selected. The modelling team has used the 13 variables available at a quarterly frequency and compared 
-quarterly interpolated values of these variables using metrics like RMSE and MAPE, R^2,  etc. (Refer to the IFRS 9 Data Transformation Document for more details 
-on this analysis). After performing this analysis, linear interpolation was selected as the better method, and all 700+ MEVs were interpolated quarterly.  
-Additionally, model developers have sourced the MEVs from secondary sources such as FRED, IMF, SAMA statistical reports and the KSA general authority for statistics. 
-Some sources provide quarterly data for MEVs, such as CPI, nominal GDP, etc. Model developers have performed the correlation analysis (refer to the Data
-Transformation document for more detail) of the quarterly interpolated data sourced from OE and common MEVs extracted from secondary sources. Correlation analysis 
-suggests that the interpolated data aligns with the MEVs sourced from secondary sources. This gives more confidence that the interpolation performed on the annual 
-data is suitable for modelling ODRs at a quarterly frequency. 
-However, model developers understand that the above analysis may not be sufficient to generalise for all 700+ MEVs (sourced from OE at annual frequency). But, 
-given the data limitation, this is the best that can be performed. Also, SAMA guidelines have no specific requirement or restriction that interpolated data can’t 
-be used for modelling. However, as a best practice, model developers referred to other regulatory guidelines and found that interpolated data can be used for 
-modelling . Hence, model developers have decided to proceed with quarterly interpolated data for modelling. 
+Reason for consumer spending: SMEs are more sensitive to business cycles (Rijken, 2005). They are expected to be more likely to fail, because they (1) are 
+less likely to benefit from scale effects, (2) have less power in negotiations with financial and social partners, (3) are less likely to benefit from their
+experience or ‘learning effects,’ compared to large firms, and (4) often operate in small markets, due to size effects. Because of the lack of product and market 
+diversification and the fact that SMEs have in general a low(er) number of suppliers and consumers, SMEs face high uncertainty about their future cash flow levels 
+and timing. This leads to volatile financial statement data through time (Rijken, 2005). The need to have financing available in order to seize unexpected market 
+opportunities or to react to external shocks is particularly important for the vitality of SMEs (Rivaud-Danset, Dubocage and Salais, 1998). Flexibility is important 
+because a company must be able to take advantage of customers’ needs and also because in their day-to-day activity SMEs meet uncertainty and need to react quickly to 
+unexpected events or opportunities. A credit risk model should therefore be able to determine the PD within a short period of time.
+ 
+Rijken, H.A. 2005. De gevolgen van Basel II voor de individuele MKB-onderneming blijven onzeker. Accounting 5.
+ 
+Rivaud-Danset, D.; Dubocage, E.; and Salais, R. 1998. Comparison between the financial structure of SMES and that of large enterprises (LES) using the BACH database. 
+http://europa.eu.int/economy_finance.
 
-Foot Note
-
-  The Bank is subscribed to Oxford Economic for Macroeconomic variables
-  Model developers have tried using these 13 variables for modelling (given that it is available at the quarterly frequency), but none of them were found to be statistically significant. 
-  Refer to CBUAE guideline article 5.2.6 https://rulebook.centralbank.ae/en/rulebook/52-data-collection 
+For instance, when consumer demand declines, firm cash flow falls. Firms fail, even after shedding workers and/or closing temporarily, when they cannot cover the 
+fall in cash flow due to financial constraints. Firm failure therefore arises from the interaction between negative non-financial shocks to liquidity and firm 
+financial frictions because firms, even when financial markets function normally, cannot fully smooth these shocks by borrowing from the financial sector. 
+ 
+Caglio, Cecilia, Matthew Darst, and Sebnem Kalemli-Ozcan, “Risk-Taking and Monetary Policy Transmission: Evidence from Loans to SMEs and Large Firms,” NBER Working Paper 28685 2021.
+Gopinath, Gita, Sebnem Kalemli-Ozcan, Loukas Karabarbounis, and Carolina VillegasSanchez, “Capital Allocation and Productivity in Southern Europe,” Quarterly Journal of Economics, 2017, 132 (4), 1915–1967
+ 
+Dinlersoz, Emin M., Henry Hyatt, Sebnem Kalemli-Ozcan, and Veronika Penciakova, “Leverage over the Firm Life Cycle, Firm Growth, and Aggregate Fluctuations,” FRB Atlanta Working Paper 2019-18, Federal Reserve Bank of Atlanta November 2019.
