@@ -1,0 +1,25 @@
+Using Quarterly Interpolated Data for Model Development
+For the current IFRS 9 Model Redevelopment exercise, 700+ Macroeconomic Variables (MEVs) from Oxford Economics (OE ) were sourced to expand the variable base. 
+All the variables are available at the annual level except for the 13 macroeconomic variables, which are available at the quarterly level. However, the internal 
+observed default rate (ODR) is available quarterly. To run the regression model with ODRs, macroeconomic variables need to be converted at the quarterly level. 
+The Banks contacted the OE to get all the variables at the quarterly level but found that only 13 variables  are available at a quarterly frequency, and the rest
+are available at an annual frequency. Hence, the model development team has decided to use interpolation to convert the macroeconomic variable quarterly from annual. 
+The model development team, with their extensive expertise, has tried and tested linear and cubic interpolation techniques to generate the quarterly data. This 
+ensures that the best interpolation technique has been selected. The modelling team has used the 13 variables available at a quarterly frequency and compared 
+quarterly interpolated values of these variables using metrics like RMSE and MAPE, R^2,  etc. (Refer to the IFRS 9 Data Transformation Document for more details 
+on this analysis). After performing this analysis, linear interpolation was selected as the better method, and all 700+ MEVs were interpolated quarterly.  
+Additionally, model developers have sourced the MEVs from secondary sources such as FRED, IMF, SAMA statistical reports and the KSA general authority for statistics. 
+Some sources provide quarterly data for MEVs, such as CPI, nominal GDP, etc. Model developers have performed the correlation analysis (refer to the Data
+Transformation document for more detail) of the quarterly interpolated data sourced from OE and common MEVs extracted from secondary sources. Correlation analysis 
+suggests that the interpolated data aligns with the MEVs sourced from secondary sources. This gives more confidence that the interpolation performed on the annual 
+data is suitable for modelling ODRs at a quarterly frequency. 
+However, model developers understand that the above analysis may not be sufficient to generalise for all 700+ MEVs (sourced from OE at annual frequency). But, 
+given the data limitation, this is the best that can be performed. Also, SAMA guidelines have no specific requirement or restriction that interpolated data can’t 
+be used for modelling. However, as a best practice, model developers referred to other regulatory guidelines and found that interpolated data can be used for 
+modelling . Hence, model developers have decided to proceed with quarterly interpolated data for modelling. 
+
+Foot Note
+
+  The Bank is subscribed to Oxford Economic for Macroeconomic variables
+  Model developers have tried using these 13 variables for modelling (given that it is available at the quarterly frequency), but none of them were found to be statistically significant. 
+  Refer to CBUAE guideline article 5.2.6 https://rulebook.centralbank.ae/en/rulebook/52-data-collection 
