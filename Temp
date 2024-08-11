@@ -1,38 +1,7 @@
-The relevance of the government consumption nominal share of GDP variable for the corporate segment in the Saudi economy can be significant. This relationship can offer insights into how government spending impacts the corporate sector's performance and default rates. Here are some key points to consider:
-1. Government Spending and Economic Growth
-•	Relevance: Government consumption, which includes spending on goods and services, can stimulate economic growth. This can lead to increased demand for corporate products and services.
-•	Impact on Corporate Segment: Higher government spending can boost corporate revenues and profitability, reducing the likelihood of defaults within the corporate segment.
-2. Infrastructure Development
-•	Relevance: Government spending often includes investments in infrastructure, such as roads, bridges, and utilities. Improved infrastructure can lower operational costs for businesses and enhance productivity.
-•	Impact on Corporate Segment: Better infrastructure can lead to increased efficiency and competitiveness for corporations, supporting growth and reducing default risks.
-3. Public Sector Contracts
-•	Relevance: In many economies, including Saudi Arabia, the government is a significant customer for corporate goods and services. Government contracts can provide stable and substantial revenue streams for businesses.
-•	Impact on Corporate Segment: Increased government consumption can lead to more contracts and business opportunities for corporations, enhancing financial stability and reducing default rates.
-
-
-The interest rate on a 10-year government bond is a critical indicator for the corporate segment in any economy, including Saudi Arabia. It serves as a benchmark for various financial activities and influences the broader economic environment. Here’s a detailed examination of its relevance to the corporate segment in the Saudi economy:
-1. Benchmark for Corporate Borrowing Costs
-•	Relevance: The 10-year government bond yield is often used as a benchmark for setting interest rates on corporate bonds and loans.
-•	Impact on Corporate Segment: Higher government bond yields can lead to higher borrowing costs for corporations, which can affect their capital expenditure, investment decisions, and overall financial health. Conversely, lower yields can reduce borrowing costs, facilitating investment and expansion.
-2. Economic Growth and Investment
-•	Relevance: The interest rate on long-term government bonds reflects investors’ expectations about future economic growth and inflation.
-•	Impact on Corporate Segment: Low bond yields typically indicate expectations of low inflation and slow economic growth, which can dampen corporate investment. High bond yields may signal higher expected inflation and growth, encouraging corporate investment if the economy is perceived as stable.
-3. Corporate Valuations
-•	Relevance: The discount rate used in corporate valuation models is often influenced by the risk-free rate, typically proxied by government bond yields.
-•	Impact on Corporate Segment: Higher bond yields increase the discount rate, which can lower the present value of future cash flows, reducing corporate valuations. This can impact stock prices and the ability of corporations to attract investment. Lower yields have the opposite effect, potentially boosting valuations and investor interest.
-
-Ideal Coefficient Sign
-In most economic contexts, the ideal or expected coefficient sign for the interest rate on a 10-year government bond variable in a regression model analyzing corporate default rates would typically be positive. This expectation aligns with the notion that rising interest rates increase the cost of debt, which can lead to higher financial strain and a greater likelihood of defaults among corporations.
-
-
-The debt service ratio (DSR) paid in the US is a measure of the proportion of income used to service debt, including principal and interest payments. While it directly applies to the US economy, its relevance to the corporate segment in the Saudi economy can be significant due to interconnected global financial markets, foreign investments, and multinational corporate operations. Here are the key points explaining this relevance:
-
-1. Global Financial Market Influence
-Relevance: The US debt service ratio can influence global interest rates and financial conditions due to the prominence of the US economy and its financial markets.
-Impact on Corporate Segment: Changes in the US DSR can affect global interest rates and liquidity, impacting the borrowing costs for Saudi corporations, especially those with international financing or dollar-denominated debt.
-2. Foreign Investment Flows
-Relevance: The US debt service ratio can impact foreign investment flows, as higher debt servicing can lead to tighter financial conditions and reduced investment capacity.
-Impact on Corporate Segment: If higher US DSR results in reduced foreign investments, Saudi corporations might face higher competition for capital, affecting their financing conditions and investment opportunities.
-3. Exchange Rate Movements
-Relevance: The US debt service ratio can influence the US dollar's strength, which affects exchange rates globally.
-Impact on Corporate Segment: For Saudi corporations with foreign currency exposure, changes in the US DSR can impact exchange rates, affecting import costs, export revenues, and overall financial stability.
+The team spent considerable time yesterday and today experimenting with various input data combinations to evaluate their impact on the ECL. Here are the key observations:
+Segmentation Impact: The largest factor contributing to the reduction in ECL is segmentation. When we combined the SME and corporate segments and made some data 
+adjustments, the ECL was similar to what is currently observed in production.
+MRS Scale Effect: The second significant factor for the decrease in ECL is the MRS scale. Using the old MRS (previously applied in an earlier version of the model) 
+results in an increase in ECL by approximately $150M. However, the source of the old MRS is currently unknown.
+Further Testing: Tomorrow, we plan to test another combination similar to the first point, but this time using the data that we prepared and submitted to IMR. 
+This will help us assess the impact of the data tweak on the ECL.
