@@ -1,7 +1,2 @@
-The team spent considerable time yesterday and today experimenting with various input data combinations to evaluate their impact on the ECL. Here are the key observations:
-Segmentation Impact: The largest factor contributing to the reduction in ECL is segmentation. When we combined the SME and corporate segments and made some data 
-adjustments, the ECL was similar to what is currently observed in production.
-MRS Scale Effect: The second significant factor for the decrease in ECL is the MRS scale. Using the old MRS (previously applied in an earlier version of the model) 
-results in an increase in ECL by approximately $150M. However, the source of the old MRS is currently unknown.
-Further Testing: Tomorrow, we plan to test another combination similar to the first point, but this time using the data that we prepared and submitted to IMR. 
-This will help us assess the impact of the data tweak on the ECL.
+In summary, stationarity is essential in time series modeling because it simplifies the modeling process, ensures the validity of statistical tests, 
+and improves forecasting accuracy.
