@@ -1,5 +1,1 @@
-Decision Strategy:
-
-If the ADF test fails to reject the null hypothesis (suggesting non-stationarity) and the KPSS test rejects its null hypothesis (also suggesting non-stationarity), then the time series is likely non-stationary.
-If the ADF test rejects the null hypothesis (suggesting stationarity) and the KPSS test fails to reject its null hypothesis (also suggesting stationarity), then the time series is likely stationary.
-Mixed results indicate the need for further investigation, possibly through differencing or other transformations.
+https://www.globaldata.com/data-insights/macroeconomic/saudi-arabia-macroeconomic-country-outlook/
