@@ -1,1 +1,27 @@
-https://www.globaldata.com/data-insights/macroeconomic/saudi-arabia-macroeconomic-country-outlook/
+The minimum number of observations required for a reliable Ordinary Least Squares (OLS) regression model, particularly for projection or forecasting, depends on several factors, including the number of predictors (independent variables), the nature of the data, and the intended use of the model. However, some general guidelines can be provided:
+
+General Guidelines:
+Rule of Thumb:
+
+A common rule of thumb is to have at least 10 to 15 observations per predictor variable. For example, if you have 5 independent variables, you should ideally have at least 50 to 75 observations.
+This rule helps ensure that the model is not overfitted and that the coefficients are estimated reliably.
+Minimum Sample Size:
+
+For simple linear regression (one independent variable), having at least 20 observations is often considered the bare minimum. However, for more complex models with multiple predictors, more observations are necessary to capture the underlying relationships accurately.
+Some sources suggest a minimum of 30 observations to perform a reliable regression analysis, especially when the results will be used for forecasting.
+Statistical Power and Model Stability:
+
+The more observations you have, the more reliable the model will be. Larger sample sizes provide more stable estimates of the coefficients and reduce the likelihood of spurious results.
+A larger sample size increases the statistical power of your tests, making it easier to detect true relationships between variables.
+Complexity of the Data:
+
+If the data has a high degree of variability or the relationship between variables is complex, more observations are needed to capture these patterns accurately.
+For time series models, the length of the series also matters, especially when autocorrelation and other time-dependent structures are present.
+Considerations:
+Multicollinearity: When predictors are highly correlated, you may need more data to obtain stable coefficient estimates.
+Overfitting: With a small sample size and many predictors, there's a risk of overfitting, where the model captures noise instead of the true underlying pattern.
+References:
+Stock, J.H., & Watson, M.W. (2015). Introduction to Econometrics. Pearson.
+Harrell, F.E. (2015). Regression Modeling Strategies: With Applications to Linear Models, Logistic and Ordinal Regression, and Survival Analysis. Springer.
+Brooks, C. (2019). Introductory Econometrics for Finance. Cambridge University Press.
+These sources offer more detailed discussions on sample size requirements and the implications of using different sample sizes in regression models.
