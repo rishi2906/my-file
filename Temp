@@ -14,3 +14,4 @@ o	Wooldridge discusses that while the intercept might be statistically insignifi
 o	This text explains that the insignificance of the intercept does not typically affect the validity of the model’s conclusions about the relationships between the independent and dependent variables. The focus should remain on whether the slope coefficients are significant and meaningful.
 3.	Montgomery, D. C., Peck, E. A., & Vining, G. G. (2012). Introduction to Linear Regression Analysis. Wiley.
 o	This resource mentions that while an insignificant intercept indicates that the expected value of the dependent variable may be close to zero when all predictors are zero, it does not invalidate the model. The key is that the inclusion of the intercept helps in fitting the model more accurately, even if it is not statistically significant.
+https://support.sas.com/kb/23/136.html
