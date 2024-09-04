@@ -1,17 +1,19 @@
-OLS Model Intercept Interpretation
-When the intercept in an OLS (Ordinary Least Squares) regression model is insignificant, it generally does not affect the validity of the model, especially when the focus is on the relationship between the independent variables and the dependent variable. This is because the primary interest in most regression analyses lies in the coefficients of the independent variables, which explain how changes in these variables impact the dependent variable.
-The intercept (often represented as β0) is the expected value of the dependent variable when all independent variables are equal to zero. In many models, this represents the baseline level of the outcome variable.
-Practical Implications:
-The insignificance of the intercept may indicate that the baseline level of the outcome is not meaningfully different from zero, or it may suggest that the situation where all predictors are zero is not relevant or realistic in the current context.
-Should we keep or remove the intercept?
-•	Even if the intercept is not statistically significant, it often still plays a role in ensuring that the model's predictions are unbiased.
-•	Typically, the intercept is included in the model to avoid bias. Removing it can force the regression line through the origin, which may not be appropriate unless there is a strong theoretical justification for doing so (e.g., the dependent variable should logically be zero when all predictors are zero).
+The Newey-West test, or more specifically, the Newey-West estimator, is crucial in regression analysis because it adjusts standard errors to account for heteroscedasticity and autocorrelation in the residuals of an OLS model. 
+
+Correcting for Autocorrelation and Heteroscedasticity
+•	Autocorrelation: In time series data, observations are often correlated with their previous values, leading to autocorrelation in the residuals. This violates one of the key assumptions of OLS regression, which assumes that the residuals are independent. Autocorrelation can lead to underestimated standard errors and inflated t-statistics, making the coefficients appear more statistically significant than they are.
+•	Heteroscedasticity: This occurs when the variance of the residuals is not constant across observations. Like autocorrelation, heteroscedasticity can distort the standard errors of the coefficients, leading to incorrect inferences.
+The Newey-West estimator adjusts the standard errors to be robust to both autocorrelation and heteroscedasticity, ensuring more reliable statistical inference.
+By providing more accurate standard errors, the Newey-West adjustment ensures that hypothesis tests (such as t-tests for individual coefficients or F-tests for overall model fit) are valid even in the presence of autocorrelation and heteroscedasticity. This makes the test particularly useful in time series econometrics, where these issues are common.
+When residuals exhibit autocorrelation and heteroscedasticity, using unadjusted standard errors can lead to incorrect conclusions about the statistical significance of predictors. The Newey-West adjustment helps to prevent this by providing more accurate estimates, which in turn improves the model’s predictive accuracy.
+
+Add results here
+
+To have a reliable significance test, model developers have computed Newey West standard error, which is valid even when the classical assumptions of homoskedasticity and no autocorrelation are violated. From the above table, it is clear that after estimating the robust standard error (using the Newey West estimator), there is no change in the coefficient magnitude, sign and significance with respect to the actual model (add reference to the actual model summary).  This shows that statistical inferences from the model are valid, and no autocorrelation and heteroscedasticity will impact the model prediction.
+
 
 References:
-1.	Wooldridge, J. M. (2016). Introductory Econometrics: A Modern Approach. Cengage Learning.
-o	Wooldridge discusses that while the intercept might be statistically insignificant, it often remains in the model because its presence ensures that the regression line is unbiased. The significance of the intercept does not generally impact the interpretation of the slope coefficients, which are often of greater interest in the analysis.
-2.	Kutner, M. H., Nachtsheim, C. J., & Neter, J. (2004). Applied Linear Regression Models. McGraw-Hill/Irwin.
-o	This text explains that the insignificance of the intercept does not typically affect the validity of the model’s conclusions about the relationships between the independent and dependent variables. The focus should remain on whether the slope coefficients are significant and meaningful.
-3.	Montgomery, D. C., Peck, E. A., & Vining, G. G. (2012). Introduction to Linear Regression Analysis. Wiley.
-o	This resource mentions that while an insignificant intercept indicates that the expected value of the dependent variable may be close to zero when all predictors are zero, it does not invalidate the model. The key is that the inclusion of the intercept helps in fitting the model more accurately, even if it is not statistically significant.
-https://support.sas.com/kb/23/136.html
+1.	Newey, W.K., & West, K.D. (1987). A Simple, Positive Semi-Definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix. Econometrica, 55(3), 703-708.
+o	This seminal paper introduced the Newey-West estimator and is fundamental to understanding its importance in econometrics.
+2.	Wooldridge, J.M. (2016). Introductory Econometrics: A Modern Approach. Cengage Learning.
+o	Wooldridge's textbook explains the application of the Newey-West adjustment in regression models, particularly in the context of time series data.
