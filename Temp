@@ -1,3 +1,1 @@
-https://www.agbi.com/retail/2024/09/online-retail-sales-in-saudi-arabia-to-double-report-says/
-
-https://www.globaldata.com/store/report/saudi-arabia-retail-market-analysis/
+Since no statistical techniques were employed for EAD modeling (specifically for CCF calculation), and instead a calculator-based approach was used, the CCF factor for each defaulted customer was derived using balance and limit information at the time of default and 12 months prior (refer to the detailed formula section for more information). Therefore, statistical tests typically relevant for regression models, such as F-tests, T-tests, and assumption tests, are not applicable in this case. However, the model developers have conducted various alternative tests, including k-fold, RMSE, and MAPE, which are outlined in the subsequent sections to evaluate the stability and accuracy of the model.
