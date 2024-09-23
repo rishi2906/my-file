@@ -1,1 +1,19 @@
-Since no statistical techniques were employed for EAD modeling (specifically for CCF calculation), and instead a calculator-based approach was used, the CCF factor for each defaulted customer was derived using balance and limit information at the time of default and 12 months prior (refer to the detailed formula section for more information). Therefore, statistical tests typically relevant for regression models, such as F-tests, T-tests, and assumption tests, are not applicable in this case. However, the model developers have conducted various alternative tests, including k-fold, RMSE, and MAPE, which are outlined in the subsequent sections to evaluate the stability and accuracy of the model.
+Drawdown Factor (DDF) is used to estimate the percentage of an undrawn credit line that will be utilized or drawn down by the borrower.
+
+The Credit Conversion Factor (CCF) is used to convert off-balance sheet items, such as undrawn loan commitments, into on-balance sheet equivalents for calculating capital requirements (as per Basel regulations).
+Example:
+If a bank has an undrawn commitment of $200,000 and the applicable CCF is 50%, the on-balance sheet equivalent would be:
+On-balance Sheet Equivalent=200,000×0.50=100,000\text{On-balance Sheet Equivalent} = 200,000 \times 0.50 = 100,000On-balance Sheet Equivalent=200,000×0.50=100,000
+This means $100,000 of the undrawn commitment will be treated as an on-balance sheet exposure for the purpose of calculating capital requirements.
+Common CCF Values (under Basel II/III regulations):
+•	0% CCF: Commitments that are unconditionally cancellable (e.g., certain types of unused credit card limits).
+•	20% CCF: Certain short-term commitments.
+•	50% CCF: Longer-term commitments, such as revolving credit facilities.
+•	100% CCF: Guarantees, letters of credit, and commitments that will almost certainly be drawn.
+Aspect	Drawdown Factor (DDF)	Conversion Factor (CCF)
+Purpose	To estimate the expected utilization of a loan facility by the borrower.	To convert off-balance sheet exposures into on-balance sheet equivalents for capital adequacy calculations.
+Application	Mainly used in stress testing and risk management for revolving credit lines or undrawn commitments.	Used in Basel capital adequacy calculations to determine credit exposure of off-balance sheet items.
+Regulatory Usage	Not explicitly a part of regulatory capital calculations but used for internal risk management.	A regulatory requirement under Basel norms for calculating Risk-Weighted Assets (RWA).
+Typical Factor Values	Can vary depending on borrower behavior and economic conditions (e.g., 40-50% for undrawn credit lines).	Prescribed by regulatory bodies (e.g., 20%, 50%, or 100% based on type of facility or commitment).
+Focus	Estimates actual future borrowing or drawdown of existing credit facilities.	Focuses on the likelihood of converting off-balance sheet items into credit exposures.
+
