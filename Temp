@@ -1,39 +1,12 @@
-To improve the Probability of Default (PD) model for Banks & Financial Institutions (FIs) portfolio, which currently relies on Through-the-Cycle (TTC) PD from historical rating transition data (from sources like S&P) and uses adjustment factors from the corporate segment to make the PD Point-in-Time (PiT), consider the following recommendations:
+Aspect	Macroeconomic Model	Vasicek Framework
+Macroeconomic Integration	Direct incorporation of detailed macroeconomic variables	Indirect, uses a latent systematic factor
+Forecasting Ability	Better for forward-looking scenarios and stress testing	Limited to historical adjustments
+Customization	Highly customizable for different portfolios and regions	Limited flexibility
+Business Cycle Sensitivity	More responsive to real-time economic changes	Less sensitive to business cycle nuances
+Interpretability	High transparency with clear economic drivers	Lower interpretability, more abstract adjustments
+Stress Testing	Well-suited for scenario-based stress testing	Generalized stress tests based on latent factors
+Regulatory Preference	Preferred for IFRS 9, CECL, and stress testing	Suitable for Basel II/III but less aligned with PiT PD expectations
+Dynamic Updates	Frequent updates based on new data	Static, long-term assumptions
 
-1. Data Enrichment and Segmentation Refinement
-Acquire Bank-Specific Data: Instead of relying solely on corporate segment adjustments due to data limitations, explore sourcing bank-specific rating transition data from other external agencies (e.g., Fitch, Moody’s) or from internal sources if available. These agencies may provide insights specific to banks and FIs that are more aligned with their risk profiles.
-Segmentation Refinement: The current model uses adjustments from the corporate segment, which may not fully capture the unique characteristics of banks and FIs. Consider creating separate sub-segments within the Banks & FIs portfolio based on characteristics such as:
-Size of the institution (e.g., small banks vs. large, multinational banks).
-Geographic focus (e.g., regional vs. international institutions).
-Business models (e.g., investment banks, retail banks, insurance firms).
-Industry-Specific Variables: Integrate variables that are specific to the banking sector, such as capital adequacy ratios (CAR), loan-to-deposit ratios (LDR), and non-performing loans (NPL) ratios, which are critical in determining the default probability for financial institutions.
-2. Refine Forward-Looking PiT Adjustments
-Tailored Macroeconomic Adjustment Factors: The current model applies forward-looking adjustments based on the corporate segment. However, banks and FIs often have different risk dynamics compared to corporates. You should explore developing bank-specific macroeconomic adjustment factors. These could include variables such as:
-Interest rates (especially relevant for FIs with exposure to loan portfolios).
-Liquidity conditions in the financial markets.
-Market volatility (e.g., VIX index or CDS spreads specific to financial institutions).
-Monetary policy actions and regulatory changes affecting the banking sector.
-Dynamic Stress Testing: Incorporate dynamic stress testing into the PiT adjustment process. For example, use historical and stress scenarios specific to the financial industry (e.g., during financial crises, pandemics) to build forward-looking PDs that better capture potential shocks.
-3. Explore Alternative Modeling Techniques
-Survival Analysis or Hazard Models: Banks and FIs have specific time-dependent risk factors, such as liquidity constraints or market downturns. Consider employing survival analysis or Cox Proportional Hazards models to better capture the timing of defaults in these institutions.
-Regime-Switching Models: Given that Banks & FIs are more susceptible to systemic risks, consider using Markov Regime-Switching models to account for different economic or financial market conditions. These models can capture the non-linear relationships between PD and macroeconomic conditions, especially in periods of financial crises.
-Machine Learning Techniques: Advanced techniques such as Gradient Boosting or Random Forests can help capture complex, non-linear interactions between economic variables and default probabilities. However, ensure these models remain interpretable to meet regulatory expectations, possibly using techniques like SHAP for transparency.
-4. Model Calibration and Validation
-Regular Calibration: The model should be recalibrated frequently to reflect the most recent economic data and changes in the banking industry, especially given the volatility of financial markets. Update macroeconomic forecasts and transition matrices to ensure the model is reflective of current market conditions.
-Backtesting: Perform rigorous backtesting of the model against actual default outcomes in the banking sector, especially in volatile periods such as the 2008 financial crisis or the COVID-19 pandemic. This will allow you to evaluate the performance and accuracy of the forward-looking PiT adjustments and refine them where needed.
-Benchmarking: Compare your model’s PD estimates to external benchmarks like the output from credit rating agencies, banking stress tests (such as those from the European Central Bank or the Federal Reserve), and peer models. This will help validate the reasonableness of your model’s predictions.
-5. Improve Data Frequency and Interpolation Methods
-Higher Frequency Macroeconomic Data: If macroeconomic data is only available annually and needs to be interpolated, explore more granular (e.g., quarterly or monthly) data sources from central banks, financial market indices, or government agencies. Higher-frequency data can improve the accuracy of the PiT adjustments.
-More Robust Interpolation Techniques: If high-frequency data is not available, consider improving the interpolation methods. Instead of simple linear interpolation, you can use cubic splines or time-series models like Kalman Filters to more accurately estimate quarterly or monthly values from annual data.
-6. Enhance Model Interpretability and Governance
-Transparent PiT Adjustment: Ensure that the methodology used to transition from TTC to PiT PD is well-documented and transparent. Use explainability tools like LIME (Local Interpretable Model-agnostic Explanations) or SHAP (SHapley Additive exPlanations) to clearly show how the model is adjusting PD based on economic conditions.
-Documentation and Governance: Strengthen model governance by documenting all assumptions, inputs, and model changes over time. This is particularly important for IFRS 9 compliance, where transparency and auditability are critical.
-7. Incorporate Global and Regional Stress Testing
-Global Stress Events: Given that banks and FIs are often exposed to global markets, incorporate global macroeconomic stress events (e.g., sovereign debt crises, currency fluctuations) into the PiT adjustments to ensure the model captures systemic risks.
-Regional Adjustments: Apply region-specific adjustments for banks and FIs operating in different jurisdictions. For instance, banks operating in emerging markets may face different macroeconomic risks than those in developed markets. Tailoring PiT adjustments to regional conditions will enhance the accuracy of default predictions.
-8. Use External Validation and Expertise
-External Review: Engage external experts or consultants with deep expertise in modeling PD for banks and FIs to review the model and provide feedback. This can help identify potential gaps or suggest advanced techniques that could be adopted to enhance the model.
-Peer Comparisons: Conduct peer comparisons to assess how similar institutions are modeling PD for the Banks & FI portfolio. Learn from best practices in the industry, especially from top-tier banks that may have more refined models.
-9. Regularly Review Model Assumptions
-Challenge Model Assumptions: Periodically revisit the assumptions made for the corporate-to-bank adjustment factors. For example, assumptions regarding correlations between corporate and FI risks may change over time. Regularly reviewing and stress-testing these assumptions will ensure they remain relevant.
-By refining segmentation, leveraging more relevant bank-specific macroeconomic data, improving modeling techniques, and strengthening governance, this model can better capture the unique risks of the banking and FI sectors and provide more accurate and forward-looking PD estimates.
+
+Regulatory bodies, especially under IFRS 9 and CECL, tend to prefer macroeconomic models because they align with forward-looking, scenario-based analysis. These models enable institutions to forecast expected credit losses under different economic conditions, providing a more realistic and transparent view of risk. The Vasicek framework, while useful for capital adequacy and RWA calculations, is less favored for regulatory stress testing and PiT PD adjustments due to its more simplified and static nature.
