@@ -1,12 +1,1 @@
-Aspect	Macroeconomic Model	Vasicek Framework
-Macroeconomic Integration	Direct incorporation of detailed macroeconomic variables	Indirect, uses a latent systematic factor
-Forecasting Ability	Better for forward-looking scenarios and stress testing	Limited to historical adjustments
-Customization	Highly customizable for different portfolios and regions	Limited flexibility
-Business Cycle Sensitivity	More responsive to real-time economic changes	Less sensitive to business cycle nuances
-Interpretability	High transparency with clear economic drivers	Lower interpretability, more abstract adjustments
-Stress Testing	Well-suited for scenario-based stress testing	Generalized stress tests based on latent factors
-Regulatory Preference	Preferred for IFRS 9, CECL, and stress testing	Suitable for Basel II/III but less aligned with PiT PD expectations
-Dynamic Updates	Frequent updates based on new data	Static, long-term assumptions
-
-
-Regulatory bodies, especially under IFRS 9 and CECL, tend to prefer macroeconomic models because they align with forward-looking, scenario-based analysis. These models enable institutions to forecast expected credit losses under different economic conditions, providing a more realistic and transparent view of risk. The Vasicek framework, while useful for capital adequacy and RWA calculations, is less favored for regulatory stress testing and PiT PD adjustments due to its more simplified and static nature.
+Cohort-Based Approach: The cohort approach is typically preferred by regulators for reporting purposes (e.g., Basel II/III, IFRS 9, CECL) due to its simplicity, transparency, and alignment with industry practices. It is easier for financial institutions to meet regulatory requirements using the cohort approach, and it is more straightforward for regulators to review, validate, and compare results across institutions.
